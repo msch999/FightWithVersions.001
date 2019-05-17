@@ -8,6 +8,10 @@ public class ControllerManager : MonoBehaviour
 {
 
     public Text infoTextField;
+    void Start()
+    {
+            
+    }
 
     // Update is called once per frame
     void Update()
