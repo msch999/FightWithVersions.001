@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 128453170}
   - component: {fileID: 128453169}
   - component: {fileID: 128453168}
+  - component: {fileID: 128453171}
   m_Layer: 0
   m_Name: SettingsBtn
   m_TagString: Untagged
@@ -202,8 +203,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: HandlePointerClick
+      - m_Target: {fileID: 841708968}
+        m_MethodName: OnQuitGameClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -252,6 +253,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128453166}
   m_CullTransparentMesh: 0
+--- !u!114 &128453171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128453166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &128528001
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +607,7 @@ GameObject:
   - component: {fileID: 512314841}
   - component: {fileID: 512314840}
   - component: {fileID: 512314839}
+  - component: {fileID: 512314842}
   m_Layer: 0
   m_Name: BackBtn
   m_TagString: Untagged
@@ -657,8 +678,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: HandlePointerClick
+      - m_Target: {fileID: 841708968}
+        m_MethodName: OnSettingsBackClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -707,6 +728,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512314837}
   m_CullTransparentMesh: 0
+--- !u!114 &512314842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512314837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates: []
 --- !u!1001 &519932874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1188,7 +1222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Or Me
+  m_Text: Play
 --- !u!222 &727497508
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1391,6 +1425,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b22bb2a9f97c1c40a7517eb1d5ea5f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuUI: {fileID: 1359596691}
+  settingsMenuUI: {fileID: 381027823}
+  pauseMenuUI: {fileID: 916939799}
 --- !u!1 &877876174
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,6 +2192,7 @@ GameObject:
   - component: {fileID: 1345454021}
   - component: {fileID: 1345454020}
   - component: {fileID: 1345454019}
+  - component: {fileID: 1345454022}
   m_Layer: 0
   m_Name: SettingsBtn
   m_TagString: Untagged
@@ -2224,18 +2262,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1345454020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: HandlePointerClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1345454020
@@ -2275,6 +2302,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345454017}
   m_CullTransparentMesh: 0
+--- !u!114 &1345454022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345454017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 841708968}
+          m_MethodName: OnSettingsClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1359596691
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,7 +2701,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click Me
+  m_Text: Settings
 --- !u!222 &1542102776
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2855,6 +2912,7 @@ GameObject:
   - component: {fileID: 1733386343}
   - component: {fileID: 1733386342}
   - component: {fileID: 1733386341}
+  - component: {fileID: 1733386344}
   m_Layer: 0
   m_Name: PlayBtn
   m_TagString: Untagged
@@ -2975,6 +3033,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733386339}
   m_CullTransparentMesh: 0
+--- !u!114 &1733386344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733386339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 841708968}
+          m_MethodName: OnResumeGameClicked
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &1773768037
 GameObject:
   m_ObjectHideFlags: 0
