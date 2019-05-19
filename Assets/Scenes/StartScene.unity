@@ -1098,7 +1098,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.313e-42, y: 6e-44, z: 0, w: 7e-45}
+  m_BoundingSphereOverride: {x: 0, y: 6.323101e-19, z: 6337696, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1389,6 +1389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 841708967}
   - component: {fileID: 841708968}
+  - component: {fileID: 841708969}
   m_Layer: 0
   m_Name: GameUI
   m_TagString: Untagged
@@ -1428,6 +1429,19 @@ MonoBehaviour:
   mainMenuUI: {fileID: 1359596691}
   settingsMenuUI: {fileID: 381027823}
   pauseMenuUI: {fileID: 916939799}
+--- !u!114 &841708969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 841708966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609200f4eaa67f64dad54abee7c3f6ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuManager: {fileID: 0}
 --- !u!1 &877876174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1562,6 +1576,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1422168469, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
+      propertyPath: vrModeOnly
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
 --- !u!1 &916939799
@@ -1674,7 +1692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
-  - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1682,14 +1699,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &963194226
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -3243,8 +3252,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 841708968}
-          m_MethodName: OnStartGameClicked
+        - m_Target: {fileID: 841708969}
+          m_MethodName: OnPlayGameClicked
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
