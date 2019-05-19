@@ -30,7 +30,7 @@ namespace Chapter4Recipe5
 
         public void OnPlayGameClicked()
         {
-            Debug.Log("I am OnPlayGame and I am clicked");
+            Debug.Log("OnPlayGame() is starting to load scene");
             StartCoroutine(LoadScene(SCENE_NAME_01));
         }
 
@@ -59,6 +59,7 @@ namespace Chapter4Recipe5
 
         public void OnGameOver()
         {
+            Debug.Log("I am OnGameOver()");
             StartCoroutine(UnloadScene());
             menuManager.OnGameOver();
         }
