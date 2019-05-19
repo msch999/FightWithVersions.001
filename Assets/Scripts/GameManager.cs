@@ -32,6 +32,7 @@ namespace Chapter4Recipe5
         {
             Debug.Log("OnPlayGame() is starting to load scene");
             StartCoroutine(LoadScene(SCENE_NAME_01));
+            //menuManager.OnStartGameClicked();
         }
 
         IEnumerator LoadScene(string sceneName)
@@ -59,9 +60,8 @@ namespace Chapter4Recipe5
 
         public void OnGameOver()
         {
-            Debug.Log("I am OnGameOver()");
-            StartCoroutine(UnloadScene());
-            menuManager.OnGameOver();
+            Debug.Log("I am OnGameOver() and quitting");
+            // StartCoroutine(UnloadScene());
         }
 
         IEnumerator UnloadScene()
