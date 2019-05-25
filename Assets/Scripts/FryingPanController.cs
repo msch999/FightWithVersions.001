@@ -9,7 +9,8 @@ public class FryingPanController : MonoBehaviour
     }
     void FixedUpdate()
     {
-        //fryingPanRigidbody.MoveRotation(GvrControllerInput.Orientation);
+        // old to new Daydream API
+        //fryingPanRigidbody.MoveRotation(GvrControllerInput.Orientation); 
         fryingPanRigidbody.MoveRotation(GvrControllerInput.GetDevice(GvrControllerHand.Dominant).Orientation);
     }
 }
