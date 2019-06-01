@@ -19,7 +19,7 @@ public class PancakeManager : MonoBehaviour
     }
 
     void Update()
-    {
+    {   // old to new Daydream API
         //if (GvrController.ClickButtonDown && inGame)
         if (GvrControllerInput.GetDevice(GvrControllerHand.Dominant).GetButtonDown(GvrControllerButton.TouchPadButton) && inGame)
         {
