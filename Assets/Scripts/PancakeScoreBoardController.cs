@@ -10,7 +10,7 @@ public class PancakeScoreBoardController : MonoBehaviour
     public Text numPancakesText;
     public PancakeManager pancakeManager;
 
-    private float timeLeft;
+    public float timeLeft;
     private bool inGame;
     private int numPancakes;
 
@@ -36,8 +36,10 @@ public class PancakeScoreBoardController : MonoBehaviour
     public void StartGame()
     {
         inGame = true;
-        timeLeft = 30f;
         numPancakes = 0;
+        if (timeLeft == 0)
+            timeLeft = 30f;
+        
         numPancakesText.text = "Flipped Pancakes: " + numPancakes;
     }
 
